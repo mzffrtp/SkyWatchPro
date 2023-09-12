@@ -25,9 +25,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  padding: 0;
+  box-sizing: border-box;
   min-height: 100vh;
 }
 
@@ -55,6 +54,8 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -66,4 +67,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.view-select-btn {
+display: flex;
+justify-content: center;
+margin-bottom: 3rem;
+gap: 3rem;
+}
+
+.active {
+  background-color: aquamarine;
+  color: tomato;
+  font-weight: bold;
+
+}
+
+header  {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+header img {
+  width:3rem;
+  background-color: #f9f9f9;
+  margin: 1rem;
+  border-radius: 1rem;
+  padding: 0.5rem;
 }
