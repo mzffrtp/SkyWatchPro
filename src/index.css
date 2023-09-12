@@ -86,13 +86,22 @@ gap: 3rem;
 header  {
   color: white;
   display: flex;
+  flex-direction: column;
+  justify-content:space-around;
   align-items: center;
-  gap: 1rem;
+  margin-bottom: 2rem;
 }
 header img {
   width:3rem;
   background-color: #f9f9f9;
-  margin: 1rem;
+  margin: 1.5rem;
   border-radius: 1rem;
   padding: 0.5rem;
+}
+
+.typed-text {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  font-size: larger;
+  background: linear-gradient(135deg, #ff6b6b, #3b5998);
 }
