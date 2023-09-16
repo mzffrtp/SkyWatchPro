@@ -72,7 +72,7 @@ button:focus-visible {
 .view-select-btn {
 display: flex;
 justify-content: center;
-margin-bottom: 3rem;
+margin-bottom: 1rem;
 gap: 3rem;
 }
 
@@ -86,10 +86,10 @@ gap: 3rem;
 header  {
   color: white;
   display: flex;
-  flex-direction: column;
-  justify-content:space-around;
+  justify-content:center;
+  gap: 1rem;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 header img {
   width:3rem;
@@ -104,4 +104,15 @@ header img {
   padding: 0.5rem;
   font-size: larger;
   background: linear-gradient(135deg, #ff6b6b, #3b5998);
+}
+
+.map-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.leaflet-container {
+  width: 90%;
+  height: 80vh;
 }

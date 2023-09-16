@@ -6,7 +6,6 @@ export default function Header () {
         <header>
             <div>
                 <motion.div
-                    animate ={{  x:[0,100,0] , y:[0,50,0] }}
                     transition= {{ ease: "easeOut", duration:2}}
                     whileHover={{ scale: 1.3 }}
                     whileTap={{ scale: 1.1 }}
@@ -23,7 +22,6 @@ export default function Header () {
                     className="typed-text"
                 />
             </div>
-            
         </header>
     )
 }

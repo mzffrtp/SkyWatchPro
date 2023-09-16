@@ -2,8 +2,7 @@ import { useState } from "react"
 import MapView from "./components/map-view"
 import ListView from "./components/list-view"
 import './index.css'
-import Header from "./components/header/header"
-
+import Header from "./components/header"
 
 function App() {
   const [showMap, setShowMap] = useState(true)
