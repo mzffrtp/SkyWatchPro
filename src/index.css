@@ -116,3 +116,14 @@ header img {
   width: 90%;
   height: 80vh;
 }
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.popup button:hover{
+  background-color: #ff6b6b;
+  color: #242424;
+}

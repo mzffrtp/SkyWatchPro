@@ -11,8 +11,8 @@ function App() {
   const dispatch = useDispatch()
 
   useEffect(()=>{
-    dispatch(getFlightData())
-  },[])
+    dispatch(getFlightData());
+  },[]);
   return (
     <>
     <Header />
