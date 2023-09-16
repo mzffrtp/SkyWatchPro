@@ -1,12 +1,18 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import MapView from "./components/map-view"
 import ListView from "./components/list-view"
 import './index.css'
 import Header from "./components/header"
+import { useDispatch } from "react-redux"
+import { getFlightData } from "./redux/flightSlice"
 
 function App() {
   const [showMap, setShowMap] = useState(true)
+  const dispatch = useDispatch()
 
+  useEffect(()=>{
+    dispatch(getFlightData())
+  },[])
   return (
     <>
     <Header />
