@@ -127,3 +127,74 @@ header img {
   background-color: #ff6b6b;
   color: #242424;
 }
+
+.plane-detail-wrapper {
+  position: fixed;
+  top: 0;
+  left: 1.7rem;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.plane-detail-inner {
+  background-color:black;
+  color: white;
+  height: 90vh;
+  width: 20rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.1rem 0.5rem lightgray;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+}
+.plane-detail-inner img{
+  padding: 0.5rem;
+  border-radius: 0.7rem;
+}
+
+.plane-detail-inner p span{
+color:red;
+padding: 0rem 0.5rem;
+}
+
+.plane-detail-inner p a{
+  text-decoration: double;
+}
+
+.plane-detail-inner h3{
+  color: aquamarine;
+  text-align: center;
+}
+
+.close-btn {
+  background-color: #ff6b6b;
+  display: flex;
+  justify-content: end;
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+}
+
+.close-btn img {
+  width:2rem;
+  height: auto;
+  cursor: pointer;
+}
+
+.pln-img{
+  border-radius: 0.5rem;
+}
+
+.loading{
+  font-size: larger;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+.dtl-header {
+font-size: larger;
+font-weight: bolder;
+text-align: center;
+color:#747bff
+}

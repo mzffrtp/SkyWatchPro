@@ -3,6 +3,8 @@ import 'leaflet/dist/leaflet.css';
 import { useSelector } from 'react-redux';
 import Leaflet from "leaflet"
 import icon from "../../assets/plane-icon.png"
+import { useState } from 'react';
+import PlaneDetails from '../plane-details';
 
 export default function MapView () {
     const flightsSlice = useSelector((state)=>state.reducer)
@@ -10,6 +12,13 @@ export default function MapView () {
         iconUrl:icon,
         iconSize:[50,50]
     })
+    const [showDetails, setShowDetails] = useState(false)
+    const [flightId, setFlightId] = useState(null);
+
+    const handleDetails = (id) =>{
+        setFlightId(id);
+        setShowDetails(true)
+    }
     return (
         <div>
             <h3>Map View</h3>
@@ -28,14 +37,17 @@ export default function MapView () {
                     <Popup>
                     <div className='popup'>
                         <span>Code:{flight.code}</span>
-                        <button>Details</button>
+                        <button
+                        onClick={()=>handleDetails(flight.id)}>Details</button>
                     </div>
                     </Popup>
                     </Marker>
                     ))
                    }
-                    
                 </MapContainer>
+                {
+                    showDetails && <PlaneDetails  flightId = {flightId} setShowDetails= {setShowDetails}/>
+                }
             </div>
         </div>
     )
