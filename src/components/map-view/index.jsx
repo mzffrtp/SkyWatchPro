@@ -21,7 +21,6 @@ export default function MapView () {
     }
     return (
         <div>
-            <h3>Map View</h3>
             <div className='map-wrapper'>
                 <MapContainer center={[59.21865, 15.00065 ]} zoom={6} scrollWheelZoom={true}>
                     <TileLayer

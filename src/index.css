@@ -28,6 +28,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   min-height: 100vh;
+  background-color: #242424;
+  color: #ffffff;
 }
 
 h1 {
