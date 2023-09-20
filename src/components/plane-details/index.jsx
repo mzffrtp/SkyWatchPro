@@ -4,6 +4,7 @@ import axios from "axios";
 export default function PlaneDetails ({flightId, setShowDetails}) {
     const [details, setDetails] = useState()
     useEffect(()=> {
+        setDetails(null)
         const options = {
             method: 'GET',
             url: 'https://flight-radar1.p.rapidapi.com/flights/detail',
@@ -35,15 +36,15 @@ export default function PlaneDetails ({flightId, setShowDetails}) {
                     src={details?.aircraft?.images?.large[0]?.src}/>
                     <h3>Airline</h3>
                     <p><span>Name:</span>{details?.airline?.name}</p>
-                    <p><span>Website:</span><a href={details?.airport?.destination?.timezone?.website}></a></p>
+                    <p><span>Tail:</span>{details?.aircraft?.registration}</p>
+                    <p><span>Model:</span>{details?.aircraft?.model?.text}</p>
                     <h3>Airport</h3>
                     <p><span>Origin:</span>{details?.airport?.origin?.name}</p>
                     <p><span>Destination:</span>{details?.airport?.destination?.name}</p>
+                    <h3>Status</h3>
+                    <p><span>Update:</span>{details?.status?.text}</p>
                     <h3>Position Now</h3>
-                    <p><span>City:</span>{details?.position?.region?.city}</p>
-
-                    
-                   
+                    <p><span>City:</span>{details?.airport?.destination?.position?.region?.city}</p>
                     </>
                 )
             }
